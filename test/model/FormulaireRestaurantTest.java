@@ -26,13 +26,13 @@ class FormulaireRestaurantTest {
 
 	@Test
 	void testGetNombrePersonnes() {
-		assertEquals(NB_PERSONNES, formulaire.getNombrePersonnes(),
+		assertEquals(NB_PERSONNES, formulaire.getNbPers(),
 				"Le nombre de personnes devrait être " + NB_PERSONNES);
 	}
 
 	@Test
 	void testGetNumService() {
-		assertEquals(NUM_SERVICE, formulaire.getNumService(), "Le numéro de service devrait être " + NUM_SERVICE);
+		assertEquals(NUM_SERVICE, formulaire.getNbService(), "Le numéro de service devrait être " + NUM_SERVICE);
 	}
 
 	@Test
@@ -48,16 +48,16 @@ class FormulaireRestaurantTest {
 	@Test
 	void setIdentificationEntite() {
 		FormulaireRestaurant formulaire2 = new FormulaireRestaurant(JOUR, MOIS, NB_PERSONNES, NUM_SERVICE);
-		assertEquals(IDENTIFICATION_1, formulaire2.getIdentificationEntite(),
+		assertEquals(IDENTIFICATION_1, formulaire2.getNumEntite(),
 				"L'identification du formulaire devrait être " + IDENTIFICATION_1);
-		formulaire2.setIdentificationEntite(IDENTIFICATION_2);
-		assertEquals(IDENTIFICATION_2, formulaire2.getIdentificationEntite(),
+		formulaire2.setNumEntite(IDENTIFICATION_2);
+		assertEquals(IDENTIFICATION_2, formulaire2.getNumEntite(),
 				"L'identification du formulaire devrait être " + IDENTIFICATION_2);
 	}
 
 	@Test
 	void getIdentificationEntite() {
-		assertEquals(IDENTIFICATION_1, formulaire.getIdentificationEntite(),
+		assertEquals(IDENTIFICATION_1, formulaire.getNumEntite(),
 				"L'identification du formulaire devrait être " + IDENTIFICATION_1);
 	}
 
